@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoTrace Dashboard: High-contrast, brutalist interface for enterprise carbon tracking.">
+    <title>EcoTrace | Brutalist Dashboard</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="brand-logo">
+            <span class="logo-box">E</span>
+            EcoTrace
+        </div>
+        <ul class="nav-links" role="tablist">
+            <li role="presentation"><a href="#dashboard-section" id="nav-dashboard" role="tab" aria-selected="true" aria-controls="dashboard-section">Overview</a></li>
+            <li role="presentation"><a href="#analytics-section" id="nav-analytics" role="tab" aria-selected="false" aria-controls="analytics-section">Analytics</a></li>
+            <li role="presentation"><a href="#reports-section" id="nav-reports" role="tab" aria-selected="false" aria-controls="reports-section">Reports</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" role="main">
+        
+        <header class="hero-section" id="dashboard-section" role="tabpanel" aria-labelledby="nav-dashboard">
+            <div class="hero-box">
+                <span class="badge">SYSTEM STATUS: READY</span>
+                <h1>TRACK YOUR CARBON FOOTPRINT.</h1>
+                <p>No fluff. Just raw data governance to achieve zero-emission targets and enforce sustainability protocols.</p>
+                <div class="action-group">
+                    <button id="start-btn" class="btn-primary" aria-label="Initialize the tracking platform">INITIALIZE</button>
+                </div>
+                <p id="status-message" class="hidden-msg" aria-live="polite">SECURING GLOBAL NODES...</p>
+            </div>
+        </header>
+
+        <section id="analytics-section" class="grid-section" style="display: none;" role="tabpanel" aria-labelledby="nav-analytics">
+            <div class="section-title">
+                <h2>METRICS_</h2>
+            </div>
+            
+            <div class="interactive-calculator">
+                <h3>IMPACT SIMULATOR</h3>
+                <p>Input actions to calculate dynamic offset.</p>
+                <div class="calc-form">
+                    <div class="input-group">
+                        <label for="trees">TREES PLANTED:</label>
+                        <input type="number" id="trees" placeholder="0" min="0" aria-required="true">
+                    </div>
+                    <div class="input-group">
+                        <label for="flights">FLIGHTS AVOIDED:</label>
+                        <input type="number" id="flights" placeholder="0" min="0" aria-required="true">
+                    </div>
+                    <button id="calculate-btn" class="btn-secondary">CALCULATE</button>
+                </div>
+                <p id="error-msg" class="error-text" aria-live="assertive"></p>
+                <div id="result-display" class="hidden-result" aria-live="polite">
+                    <h4>TOTAL OFFSET:<br><span id="co2-result" class="accent-large">0</span> <span class="unit">KG CO2e</span></h4>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div class="grid-card">
+                    <h3>EMISSIONS DATA</h3>
+                    <p>Scope 1, 2, and 3 emissions monitored across the entire supply chain vector.</p>
+                </div>
+                <div class="grid-card">
+                    <h3>RESOURCE OPTIMIZATION</h3>
+                    <p>Water usage and waste reduction tracking for maximum operational efficiency.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reports-section" class="grid-section" style="display: none;" role="tabpanel" aria-labelledby="nav-reports">
+            <div class="section-title">
+                <h2>REPORTS_</h2>
+            </div>
+            <div class="grid-container">
+                <div class="grid-card">
+                    <h3>Q1 2026 ESG AUDIT</h3>
+                    <p>Unfiltered environmental and governance metrics for Q1.</p>
+                    <button class="btn-secondary outline" aria-label="Download Q1 2026 ESG Audit PDF">DOWNLOAD .PDF</button>
+                </div>
+                <div class="grid-card">
+                    <h3>ANNUAL CARBON ANALYSIS</h3>
+                    <p>Verified third-party compliance breakdown.</p>
+                    <button class="btn-secondary outline" aria-label="Download Annual Carbon Analysis PDF">DOWNLOAD .PDF</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>ECOTRACE // 2026 // RAW DATA PLATFORM</p>
+        </div>
+    </footer>
+
+</body>
+</html>
